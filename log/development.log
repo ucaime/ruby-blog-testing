@@ -223,3 +223,196 @@ Processing by MicropostsController#new as HTML
 Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.3ms)
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"  WHERE "microposts"."user_id" = ?  [["user_id", 1]]
+
+
+Started POST "/microposts" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fHgTdna1fRiJ0YuZDaPy0nssSqHpBUZ9wlC/KeBpnxc=", "micropost"=>{"content"=>"ykkd", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "microposts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "ykkd"], ["created_at", "2014-11-24 11:37:06.449578"], ["updated_at", "2014-11-24 11:37:06.449578"], ["user_id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 19:37:06 +0800
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-11-24 19:37:09 +0800
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"
+  Rendered microposts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:37:11 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-11-24 19:37:12 +0800
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"
+  Rendered microposts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2014-11-24 19:37:13 +0800
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (1.4ms)
+  Rendered microposts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-11-24 19:37:15 +0800
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:40:54 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:40:59 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 19:42:14 +0800
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 19:43:12 +0800
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-11-24 19:48:52 +0800
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT  "microposts".* FROM "microposts"  WHERE "microposts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered microposts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.33.1 at 2014-11-24 23:54:06 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
